@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="src/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,32 +12,36 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <title>French Poem Generator</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=send" />   
+<title>French Poem Generator</title>
 </head>
 <body>
+  <div class="container">
     <header>
     <h1>French Poem Generator AI</h1>
     </header>
-    <div>Welcome!</div>
-    <main>
-    <div>The poem goes here</div>
+    <main class="textbox">
+    <div></div>
     <form >
-        <input type="text" placeholder="Enter the topic for the french poem"
-        autofocus required 
+        <input type="text" placeholder="Let's start with one word!" 
         />
-        <input type="submit" />
+        <button type="submit">
+          <span class="material-symbols-outlined">
+            send
+            </span>
+      </button>
     </form>
     </main>
+  </div>
     <footer>
         This AI project was coded by
         <a href="https://github.com/quinnie9" target="_blank">Quinn Villa</a> and
-        is
+        is open-sourced on 
         <a
           href="https://github.com/quinnie9/french-poem-generator"
           target="_blank"
-        >
-          open-sourced on GitHub</a
-        >
+        >GitHub</a>
         and is
         <a href="https://frenchpoemaiqv.netlify.app/" target="_blank"
           >hosted on Netlify</a
