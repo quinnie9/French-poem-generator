@@ -14,15 +14,10 @@ body {
     background-color: #ffffff3c;
     min-height: 100vh;
     padding-top: 50px;
-    background-image: url("https://media.istockphoto.com/id/1369337114/vector/france-flag-flag-illustration.jpg?s=612x612&w=0&k=20&c=ibpaq2tnkYL5D-MDaBR9HSKzwzQplrwbR1GONThTWgI=");
+    background: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
     background-repeat: no-repeat;
     background-size: cover;
-    
-}
-
-h1 {
-    font-weight: 800;
-    color: rgb(81, 69, 83);
+    overflow: hidden;
 }
 
 .container {
@@ -30,21 +25,60 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    max-width: 600px;
-    min-height: 80vh;
-    background: #f9f7fa00;
+    width: 70%;
+    min-height: 100vh;
+    background: rgba(255, 255, 255, 0.703);
     padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+    
+    transform: translateY(100%);
+    opacity: 0;
+    animation: slideUp 1s ease-out forwards;
+}
+
+h1, .textbox, form {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+h1 {
+    font-weight: 600;
+    color: rgb(81, 69, 83);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .textbox {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    background-color: rgba(255, 255, 255, 0);
     padding: 20px;
     border-radius: 12px;
-    width: 100%;
+    width: 40%;
 }
 
 .material-symbols-outlined {
@@ -60,6 +94,7 @@ form {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px;
+    background: white;
 }
 
 input {
@@ -69,6 +104,7 @@ input {
     outline: none !important;
     font-size: 16px;
     padding: 8px;
+    background: transparent;
 }
 
 button {
@@ -78,14 +114,15 @@ button {
     padding: 8px;
 }
 
+
 footer {
     width: 100%;
-    background-color: #ffffff84;
     color: rgb(80, 80, 80);
     padding: 10px;
     text-align: center;
-    margin-top: auto;
     font-family: "Space Mono", monospace;
+    position: absolute;
+    bottom: 0;
 }
 
 a {
