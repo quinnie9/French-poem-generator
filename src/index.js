@@ -13,7 +13,7 @@ function displayPoem(response) {
     new Typewriter("#poem", {
         strings: poemData,
         autoStart: true,
-        delay: 100,
+        delay: 50,
         cursor: ""
       });
 }
