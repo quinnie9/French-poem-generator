@@ -44,6 +44,28 @@ h1 {
     padding: 20px;
 }
 
+.textbox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 12px;
+    width: 50%;
+}
+
+h1, .textbox {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 form {
     display: flex;
@@ -64,30 +86,6 @@ form {
     font-size: 36px;
 }
 
-h1, .textbox {
-    opacity: 0;
-    animation: fadeIn 1.5s ease-in-out forwards;
-    animation-delay: 1s;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-
-.textbox {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    border-radius: 12px;
-    width: 50%;
-}
-
 input {
     flex: 1;
     border: none;
@@ -102,15 +100,12 @@ input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset !important;
 }
 
-
-
 button {
     border: none;
     background-color: transparent;
     cursor: pointer;
     padding: 8px;
 }
-
 
 footer {
     width: 100%;
@@ -125,7 +120,8 @@ a {
 }
 
 body.poemDisplay .container {
-    background: rgba(255, 255, 255, 0.837)}  
+    background: rgba(255, 255, 255, 0.837)
+}  
 
 body.poemDisplay h1 {
         font-size: 26px;
@@ -143,7 +139,6 @@ body.poemDisplay form {
     width: 100%;
     margin-top: auto;
 }
-
 
 body.poemDisplay .poem {
     background-color: rgba(255, 255, 255, 0.393);
