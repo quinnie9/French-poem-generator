@@ -4,6 +4,7 @@ function displayPoem(response) {
         strings: `...`,
         autoStart: true,
         delay: 300,
+        cursor: ""
       });
 
     console.log(response.data.answer)
@@ -13,6 +14,7 @@ function displayPoem(response) {
         strings: poemData,
         autoStart: true,
         delay: 100,
+        cursor: ""
       });
 }
 
@@ -23,7 +25,7 @@ function generatePoem(event) {
     let word = searchInputElement.value;
     
     let apikey = "401t83c73f9a5ce923fbbco0d7594958";
-    let prompt = "Please be precise, provide the poem in basic HTML code and start only with the poem, please omit everything that would be displayed as code. Keep it to five lines at maximum"
+    let prompt = "Please be precise, provide the poem in basic HTML code and start only with the poem, please omit everything that would be displayed as code. Keep it to six long lines at maximum"
     let context = `Generate a a French Poem using the ${word}`;
     let EndPoint = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apikey}`;
     axios.get(EndPoint).then(displayPoem);
@@ -33,9 +35,9 @@ function generatePoem(event) {
     body.classList.add("poemDisplay");
   
     new Typewriter("#poemWord", {
-        strings: `${word}`,
+        strings: `${word} ✨`,
         autoStart: true,
-        delay: 200,
+        delay: 50,
         cursor: ""
       });
     
@@ -47,7 +49,10 @@ function generatePoem(event) {
       strings: `...`,
       autoStart: true,
       delay: 300,
+      cursor: ""
     });
+
+    searchInputElement.value = "";
 
 }
 
