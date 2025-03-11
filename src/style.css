@@ -131,11 +131,6 @@ body.poemDisplay h1 {
         font-size: 26px;
 }
 
-body.poemDisplay form {
-    width: 100%;
-    margin-top: auto;
-}
-
 body.poemDisplay .textbox {
     background-color: rgba(255, 255, 255, 0.11);
     width: 100%;
@@ -143,6 +138,12 @@ body.poemDisplay .textbox {
     gap: 10px;
     padding: 100px 150px 36px 150px;
 }
+
+body.poemDisplay form {
+    width: 100%;
+    margin-top: auto;
+}
+
 
 body.poemDisplay .poem {
     background-color: rgba(255, 255, 255, 0.393);
