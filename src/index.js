@@ -26,7 +26,7 @@ function generatePoem(event) {
     
     let apikey = "401t83c73f9a5ce923fbbco0d7594958";
     let prompt = "Please be precise, provide the poem in basic HTML code and start only with the poem, please omit everything that would be displayed as code. Keep it to six long lines at maximum"
-    let context = `Generate a a French Poem using the ${word}`;
+    let context = `Generate a Poem using the ${word}`;
     let EndPoint = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apikey}`;
     axios.get(EndPoint).then(displayPoem);
     console.log(EndPoint);
@@ -55,10 +55,6 @@ function generatePoem(event) {
     searchInputElement.value = "";
 
 }
-
-
-
-
 
 let poemFormElement = document.querySelector("#poemForm")
 poemFormElement.addEventListener("submit", generatePoem)

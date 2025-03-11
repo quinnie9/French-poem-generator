@@ -26,7 +26,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 70%;
-    min-height: 100vh;
+    min-height: 90vh;
     background: rgba(255, 255, 255, 0.814);
     padding: 20px;
     border-radius: 12px;
@@ -39,15 +39,11 @@ body {
 h1 {
     font-size: 46px;
     font-weight: 500;
-    color: rgb(81, 69, 83);
+    color: rgb(95, 69, 99);
     font-family: Arial, Helvetica, sans-serif;
     padding: 20px;
 }
 
-.material-symbols-outlined {
-    color: rgb(122, 99, 127);
-    font-size: 36px;
-}
 
 form {
     display: flex;
@@ -55,7 +51,7 @@ form {
     align-items: center;
     width: 100%;
     border: 1px solid #ddd;
-    border-radius: 36px;
+    border-radius: 16px;
     padding: 10px;
     background: white;
     opacity: 0;
@@ -63,14 +59,10 @@ form {
     animation-delay: 2s; 
 }
 
-/*main {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    background-color: rgba(255, 255, 255, 0);
-    border-radius: 10px;
-    width: 100%;
-} */
+.material-symbols-outlined { /*taken from google icons*/
+    color: rgb(122, 99, 127);
+    font-size: 36px;
+}
 
 h1, .textbox {
     opacity: 0;
@@ -88,26 +80,12 @@ h1, .textbox {
 }
 
 
-body.poemDisplay h1 {
-        display: block;
-        margin: 0 auto;
-        font-weight: 500;
-        color: rgba(81, 69, 83, 0.889);
-        font-size: 26px;
-}
-
-body.poemDisplay .textbox {
+.textbox {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    background-color: rgba(255, 255, 255, 0.11);
     border-radius: 12px;
-}
-
-
-body.poemDisplay form {
-    width: 70%;
-    margin-top: auto;
+    width: 50%;
 }
 
 input {
@@ -124,86 +102,6 @@ input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset !important;
 }
 
-/* Dynamic Class */
-/*body.poemDisplay .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; 
-  align-items: center;
-  width: 80%;
-  min-height: 100vh; 
-  background: rgba(255, 255, 255, 0.703);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
-  animation-delay: 0.5s; 
-}*/
-
-body.poemDisplay .container {
-    background: rgba(255, 255, 255, 0.837)}  
-
-body.poemDisplay .poem {
-    background-color: rgba(255, 255, 255, 0.393);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 500px;
-    margin-bottom: 20px;
-    line-height: 1.7;
-    text-align: justify;
-    color: #2f153f;
-  }
-  
-  body.poemDisplay .poemWord {
-    background-color: rgba(255, 255, 255, 0.393);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-    align-self: flex-start;
-    color: #2f153f;
-    
-  }
-
-body.poemDisplay .textbox {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-    width: 100%;
-    flex-grow: 1; 
-    gap: 10px;
-    padding: 150px;
-}
-
-
-body.poemDisplay form {
-    width: 100%;
-    margin-top: 20px;
-    align-self: center; 
-}
-
-
-body.poemDisplay footer {
-    width: 100%;
-    color: rgb(80, 80, 80);
-    padding: 10px;
-    text-align: center;
-    font-family: "Space Mono", monospace;
-    position: absolute;
-    bottom: 10px;
-}
-
-
-.textbox {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    border-radius: 12px;
-    width: 50%;
-}
 
 
 button {
@@ -220,10 +118,51 @@ footer {
     padding: 10px;
     text-align: center;
     font-family: "Space Mono", monospace;
-    position: absolute;
-    bottom: 10px;
 }
 
 a {
     color: #8d88e6;
 }
+
+body.poemDisplay .container {
+    background: rgba(255, 255, 255, 0.837)}  
+
+body.poemDisplay h1 {
+        font-size: 26px;
+}
+
+body.poemDisplay form {
+    width: 100%;
+    margin-top: auto;
+}
+
+body.poemDisplay .textbox {
+    background-color: rgba(255, 255, 255, 0.11);
+    width: 100%;
+    flex-grow: 1; 
+    gap: 10px;
+    padding: 100px 150px 36px 150px;
+}
+
+body.poemDisplay .poem {
+    background-color: rgba(255, 255, 255, 0.393);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    text-align: justify;
+    color: #2f153f;
+  }
+  
+  body.poemDisplay .poemWord { /*needs to be styled separately as I couldn't make the styling alongside the .poem */
+    background-color: rgba(255, 255, 255, 0.393);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    align-self: flex-start;
+    color: #2f153f;
+    
+  }
